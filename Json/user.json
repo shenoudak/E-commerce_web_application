@@ -1,0 +1,30 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"name": "shenouda",
+			"email": "shenouda@gmail.com",
+			"password": "shenouda@123"
+           },
+		 {
+
+			"id": 2,
+			"name": "mahmmod",
+			"email": "mahmmod@gmail.com",
+			"password": "mahmmod@123"
+         },
+		{
+			"id": 3,
+			"name": "meret",
+			"email": "meret@gmail.com",
+			"password": "meret@123"
+        },
+		{
+
+			"id": 4,
+			"name": "nada",
+			"email": "nada@gmail.com",
+			"password": "nada@123"
+            }
+                  ]
+}
