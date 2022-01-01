@@ -175,7 +175,7 @@
 			"type": [
 				{
 					"id": 1,
-					"name": "kb1",
+					"name": "mouse1",
 					"act_price": "10$",
 					"price": "5$",
 					"picName" :"mos1.jfif"
@@ -183,7 +183,7 @@
 				},
 				{
 					"id": 2,
-					"name": "kb2",
+					"name": "mouse2",
 					"act_price": "400$",
 					"price": "350$",
 					"picName" :"mos2.jfif"
@@ -191,7 +191,7 @@
 				},
 				{
 					"id": 3,
-					"name": "kb3",
+					"name": "mouse3",
 					"act_price": "70$",
 					"price": "60$",
 					"picName" :"mos3.jfif"
@@ -199,7 +199,7 @@
 				},
 				{
 					"id": 4,
-					"name": "kb4",
+					"name": "mouse4",
 					"act_price": "30$",
 					"price": "20$",
 					"picName" :"mos4.jfif"
@@ -207,7 +207,7 @@
 				},
 				{
 					"id": 5,
-					"name": "kb5",
+					"name": "mouse5",
 					"act_price": "40$",
 					"price": "35$",
 					"picName" :"mos5.jfif"
@@ -215,7 +215,7 @@
 				},
 				{
 					"id": 6,
-					"name": "kb6",
+					"name": "mouse6",
 					"act_price": "50$",
 					"price": "35$",
 					"picName" :"mos6.jfif"
