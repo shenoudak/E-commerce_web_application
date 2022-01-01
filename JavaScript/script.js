@@ -124,6 +124,7 @@ var div;
 var jsonName = [];
 var jsonPic = [];
 var dataObj = [];
+var content = document.getElementById("content");
 var btn = document.getElementById("btn");
 console.log(btn);
 document.addEventListener('DOMContentLoaded', function () {
@@ -141,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			div.id = ('container' + i);
 			//div.onclick="fun"+(i+1)+"()";
 			div.className = 'div_dynamic';
-			document.body.appendChild(div);
+			content.appendChild(div);
 			var tag = document.createElement("p");
 			var img = document.createElement("img");
 			img.className = 'img_style';
@@ -159,62 +160,69 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 }, false);
+var window;
 /////////////////fetch data with id cat///////////////
-function _show_by(ind,img_folder) {
+var subcontent = document.getElementById("subcontent");
+
+function _show_by(ind, img_folder) {
 	console.log(ind);
-	document.addEventListener('DOMContentLoaded', function () {
-		console.log("hijj");
-		fetch("../Json/products.json").then(function (res) {
-			console.log(res);
-			return res.json()
-		}).then(function (data) {
-			console.log(data);
-			dataObj = data.Categories[ind];
-			console.log(dataObj);
-			for (var i = 0; i < dataObj.type.length; i++) {
-				jsonName[i] = dataObj.type[i].name;
-				jsonPic[i] = dataObj.type[i].picName;
-				div = document.createElement('div');
-				div.id = ('container' + i);
-				//div.onclick="fun"+(i+1)+"()";
-				div.className = 'div_dynamic';
-				document.body.appendChild(div);
-				var tag = document.createElement("p");
-				var img = document.createElement("img");
-				img.className = 'img_style';
-				img.src = "../images/cat/"+img_folder+"/" + jsonPic[i];
-				img.id = ('_img' + i);
-				var text = document.createTextNode(jsonName[i]);
-				tag.appendChild(text);
-				var element = document.getElementById("container" + i);
-				element.appendChild(img);
-				element.appendChild(tag);
+	content.style.display = "none";
+	console.log(content.style.visibility);
+	console.log("hijj");
+	fetch("../Json/products.json").then(function (res) {
+		console.log(res);
+		return res.json()
+	}).then(function (data) {
+		console.log(data);
+		dataObj = data.Categories[ind];
+		console.log(dataObj.type.length);
+		for (var i = 0; i < dataObj.type.length; i++) {
+			console.log("hi");
+			jsonName[i] = dataObj.type[i].name;
+			jsonPic[i] = dataObj.type[i].picName;
+			div = document.createElement('div');
+			div.id = ('container' + i);
+			//div.onclick="fun"+(i+1)+"()";
+			div.className = 'div_dynamic';
+			subcontent.appendChild(div);
+			//console.log(div);
+			var tag = document.createElement("p");
+			var img = document.createElement("img");
+			img.className = 'img_style';
+			img.src = "../images/cat/" + img_folder + "/" + jsonPic[i];
+			img.id = ('_img' + i);
+			div.appendChild(img);
+
+			var text = document.createTextNode(jsonName[i]);
+			tag.appendChild(text);
+			div.appendChild(tag);
+			console.log(div);
+			//content.style.visibility = "visible";
 
 
-			}
 
-		});
 
-	}, false);
+		}
+
+	});
+	
+
 }
 var _body = document.getElementById("_body");
 _body.onload = function () {
-	document.addEventListener('click', function (e) {
+	content.addEventListener('click', function (e) {
 		if (e.target && e.target.id == 'container0' || e.target && e.target.id == '_img0') {
-			_show_by(0,"mob");
+			_show_by(0, "mob");
 			console.log("h");
 
-		}
-		else if (e.target && e.target.id == 'container1' || e.target && e.target.id == '_img1') {
-			_show_by(1,"lab");
+		} else if (e.target && e.target.id == 'container1' || e.target && e.target.id == '_img1') {
+			_show_by(1, "lab");
 
-		}
-		else if (e.target && e.target.id == 'container2' || e.target && e.target.id == '_img2') {
-			_show_by(2,"key");
+		} else if (e.target && e.target.id == 'container2' || e.target && e.target.id == '_img2') {
+			_show_by(2, "key");
 
-		}
-		else  {
-			_show_by(3,"mos");
+		} else {
+			_show_by(3, "mos");
 
 		}
 	});
