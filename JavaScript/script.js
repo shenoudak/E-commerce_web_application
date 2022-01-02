@@ -263,7 +263,8 @@ sub_contenet.addEventListener('click', function (e) {
 			removeFromCard(0, e);
 		}
 
-	}  if (e.target && e.target.id == 'btn_add_to_cart1') {
+	}
+	if (e.target && e.target.id == 'btn_add_to_cart1') {
 		if (e.target.textContent == buttonName) {
 			addToCard(1, e);
 			console.log("add done done");
@@ -272,7 +273,8 @@ sub_contenet.addEventListener('click', function (e) {
 			console.log("remove done");
 		}
 
-	}  if (e.target && e.target.id == 'btn_add_to_cart2') {
+	}
+	if (e.target && e.target.id == 'btn_add_to_cart2') {
 
 		if (e.target.textContent == buttonName) {
 			console.log("add done done");
@@ -282,7 +284,8 @@ sub_contenet.addEventListener('click', function (e) {
 			console.log("remove done");
 		}
 
-	}  if (e.target && e.target.id == 'btn_add_to_cart3') {
+	}
+	if (e.target && e.target.id == 'btn_add_to_cart3') {
 
 		if (e.target.textContent == buttonName) {
 			console.log("add done done");
@@ -292,7 +295,8 @@ sub_contenet.addEventListener('click', function (e) {
 			console.log("remove done");
 		}
 
-	}  if (e.target && e.target.id == 'btn_add_to_cart4') {
+	}
+	if (e.target && e.target.id == 'btn_add_to_cart4') {
 
 		if (e.target.textContent == buttonName) {
 			console.log("add done done");
@@ -303,7 +307,8 @@ sub_contenet.addEventListener('click', function (e) {
 			console.log("remove done");
 		}
 
-	}  if (e.target && e.target.id == 'btn_add_to_cart5') {
+	}
+	if (e.target && e.target.id == 'btn_add_to_cart5') {
 
 		if (e.target.textContent == buttonName) {
 			console.log("add done done");
@@ -419,34 +424,34 @@ var cardContent = document.getElementById("cardContent");
 console.log(cardContent);
 
 //function getDataFromLocalStorage() {
-	function getData() {
-		//var myWindow=window.open('card.html/?test='+counterElementInLocalStorage,'');
+function getData() {
+	//var myWindow=window.open('card.html/?test='+counterElementInLocalStorage,'');
 
-//		if (true) {
-//			div = document.createElement('div');
-//			div.id = 'container_less_data';
-//
-//			div.className = 'container_less_data_class';
-//			cardContent.appendChild(div);
-//			var tag = document.createElement("p");
-//			var text = document.createTextNode("NOt Element in Card");
-//			tag.appendChild(text);
-//			div.appendChild(tag);
-//			console.log(cardContent);
-//			card_window = window.open("card.html");
-
-
-//		}
-		//		if (localStorage.getItem("name") == null || localStorage.getItem == null) {
-		//			alert('Not Found data in localStorage');
-		//		} else {
-		//			username.value = localStorage.getItem("name");
-		//			userPassword.value = localStorage.getItem("password");
-		//		}
+	//		if (true) {
+	//			div = document.createElement('div');
+	//			div.id = 'container_less_data';
+	//
+	//			div.className = 'container_less_data_class';
+	//			cardContent.appendChild(div);
+	//			var tag = document.createElement("p");
+	//			var text = document.createTextNode("NOt Element in Card");
+	//			tag.appendChild(text);
+	//			div.appendChild(tag);
+	//			console.log(cardContent);
+	//			card_window = window.open("card.html");
 
 
+	//		}
+	//		if (localStorage.getItem("name") == null || localStorage.getItem == null) {
+	//			alert('Not Found data in localStorage');
+	//		} else {
+	//			username.value = localStorage.getItem("name");
+	//			userPassword.value = localStorage.getItem("password");
+	//		}
 
-	}
+
+
+}
 //}
 
 function RemoveDataFronLocalStorage(ind) {
