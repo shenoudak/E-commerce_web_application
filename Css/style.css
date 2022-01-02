@@ -18,6 +18,7 @@ body{
 	
 }
 
+
 .img_style{
 	
 	box-sizing: border-box;
@@ -31,6 +32,10 @@ body{
 #content .img_style{
 	width: 200px;
 	height: 200px;
+}
+#cardContent .img_style{
+	width: 150px;
+	height: 150px;
 }
 #subcontent .img_style{
 	width: 150px;
@@ -188,4 +193,38 @@ div.gallery {
     position: absolute;
     left: 900px;
 }
+/*form style*/
+ input {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        background-color: white;
+        padding: 20px;
+        width: 80%;
+      }
+.no-outline:focus {
+        outline: none;
+      }
+      .form_style{
+        margin: 30px;
+        padding: 30px;
+      }
+      .button_style{
+        width: 80%;
+        height: 60px;
+        margin-top: 50px;
+        background-color: green;
+        color: white;
+        justify-content: center;
+        float: center;
+
+      }
+      img{
+        padding: 0;
+        margin: 0;
+        position: relative;
+      }
+
+      
 

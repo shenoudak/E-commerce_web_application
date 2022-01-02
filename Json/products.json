@@ -10,7 +10,7 @@
 					"name": "Samsung",
 					"act_price": "500$",
 					"price": "400$",
-					"picName" :"mob1.jfif"
+					"picName" :"mob/mob1.jfif"
 
 				},
 				{
@@ -18,7 +18,7 @@
 					"name": "Hwawi",
 					"act_price": "400$",
 					"price": "350$",
-					"picName" :"mob2.jfif"
+					"picName" :"mob/mob2.jfif"
 
 				},
 				{
@@ -26,7 +26,7 @@
 					"name": "Iphone",
 					"act_price": "700$",
 					"price": "600$",
-					"picName" :"mob3.jfif"
+					"picName" :"mob/mob3.jfif"
 
 				},
 				{
@@ -34,7 +34,7 @@
 					"name": "Nokia",
 					"act_price": "300$",
 					"price": "200$",
-					"picName" :"mob4.jfif"
+					"picName" :"mob/mob4.jfif"
 
 				},
 				{
@@ -42,7 +42,7 @@
 					"name": "Blackbery",
 					"act_price": "400$",
 					"price": "350$",
-					"picName" :"mob5.jfif"
+					"picName" :"mob/mob5.jfif"
 
 				},
 				{
@@ -50,7 +50,7 @@
 					"name": "Sony",
 					"act_price": "500$",
 					"price": "350$",
-					"picName" :"mob6.jfif"
+					"picName" :"mob/mob6.jfif"
 
 				}
 
@@ -66,7 +66,7 @@
 					"name": "Dell",
 					"act_price": "3100$",
 					"price": "2700$",
-					"picName" :"lab1.png"
+					"picName" :"lab/lab1.png"
 
 				},
 				{
@@ -74,7 +74,7 @@
 					"name": "HP",
 					"act_price": "3000$",
 					"price": "2700$",
-					"picName" :"lab2.png"
+					"picName" :"lab/lab2.png"
 
 				},
 				{
@@ -82,7 +82,7 @@
 					"name": "Toshiba",
 					"act_price": "1000$",
 					"price": "900$",
-					"picName" :"lab3.jfif"
+					"picName" :"lab/lab3.jfif"
 
 				},
 				{
@@ -90,7 +90,7 @@
 					"name": "Mac",
 					"act_price": "4000$",
 					"price": "3500$",
-					"picName" :"lab4.jfif"
+					"picName" :"lab/lab4.jfif"
 
 				},
 				{
@@ -98,7 +98,7 @@
 					"name": "Lenovo",
 					"act_price": "4200$",
 					"price": "4150$",
-					"picName" :"lab5.jfif"
+					"picName" :"lab/lab5.jfif"
 
 				},
 				{
@@ -106,7 +106,7 @@
 					"name": "Sony",
 					"act_price": "2500$",
 					"price": "2450$",
-					"picName" :"lab6.jfif"
+					"picName" :"lab/lab6.jfif"
 
 				}
 
@@ -122,7 +122,7 @@
 					"name": "kb1",
 					"act_price": "10$",
 					"price": "5$",
-					"picName" :"key1.png"
+					"picName" :"key/key1.png"
 
 				},
 				{
@@ -130,7 +130,7 @@
 					"name": "kb2",
 					"act_price": "400$",
 					"price": "350$",
-					"picName" :"key2.jfif"
+					"picName" :"key/key2.jfif"
 
 				},
 				{
@@ -138,7 +138,7 @@
 					"name": "kb3",
 					"act_price": "70$",
 					"price": "60$",
-					"picName" :"key3.jfif"
+					"picName" :"key/key3.jfif"
 
 				},
 				{
@@ -146,7 +146,7 @@
 					"name": "kb4",
 					"act_price": "30$",
 					"price": "20$",
-					"picName" :"key4.jfif"
+					"picName" :"key/key4.jfif"
 
 				},
 				{
@@ -154,7 +154,7 @@
 					"name": "kb5",
 					"act_price": "40$",
 					"price": "35$",
-					"picName" :"key5.jfif"
+					"picName" :"key/key5.jfif"
 
 				},
 				{
@@ -162,7 +162,7 @@
 					"name": "kb6",
 					"act_price": "50$",
 					"price": "35$",
-					"picName" :"key6.jfif"
+					"picName" :"key/key6.jfif"
 
 				}
 
@@ -178,7 +178,7 @@
 					"name": "mouse1",
 					"act_price": "10$",
 					"price": "5$",
-					"picName" :"mos1.jfif"
+					"picName" :"mos/mos1.jfif"
 
 				},
 				{
@@ -186,7 +186,7 @@
 					"name": "mouse2",
 					"act_price": "400$",
 					"price": "350$",
-					"picName" :"mos2.jfif"
+					"picName" :"mos/mos2.jfif"
 
 				},
 				{
@@ -194,7 +194,7 @@
 					"name": "mouse3",
 					"act_price": "70$",
 					"price": "60$",
-					"picName" :"mos3.jfif"
+					"picName" :"mos/mos3.jfif"
 
 				},
 				{
@@ -202,7 +202,7 @@
 					"name": "mouse4",
 					"act_price": "30$",
 					"price": "20$",
-					"picName" :"mos4.jfif"
+					"picName" :"mos/mos4.jfif"
 
 				},
 				{
@@ -210,7 +210,7 @@
 					"name": "mouse5",
 					"act_price": "40$",
 					"price": "35$",
-					"picName" :"mos5.jfif"
+					"picName" :"mos/mos5.jfif"
 
 				},
 				{
@@ -218,7 +218,7 @@
 					"name": "mouse6",
 					"act_price": "50$",
 					"price": "35$",
-					"picName" :"mos6.jfif"
+					"picName" :"mos/mos6.jfif"
 
 				}
 

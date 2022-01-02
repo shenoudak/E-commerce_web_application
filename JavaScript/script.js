@@ -202,7 +202,7 @@ function _show_by(ind, img_folder) {
 			btn_add_to_cart.appendChild(btn_name);
 			var img = document.createElement("img");
 			img.className = 'img_style';
-			img.src = "../images/cat/" + img_folder + "/" + jsonPic[i];
+			img.src = "../images/cat/" + jsonPic[i];
 			img.id = ('_img' + i);
 			div.appendChild(img);
 			var text = document.createTextNode(jsonName[i]);
@@ -233,17 +233,17 @@ var _body = document.getElementById("_body");
 _body.onload = function () {
 	content.addEventListener('click', function (e) {
 		if (e.target && e.target.id == 'container0' || e.target && e.target.id == '_img0') {
-			_show_by(0, "mob");
+			_show_by(0);
 			console.log(e.target);
 
 		} else if (e.target && e.target.id == 'container1' || e.target && e.target.id == '_img1') {
-			_show_by(1, "lab");
+			_show_by(1);
 
 		} else if (e.target && e.target.id == 'container2' || e.target && e.target.id == '_img2') {
-			_show_by(2, "key");
+			_show_by(2);
 
 		} else if (e.target && e.target.id == 'container3' || e.target && e.target.id == '_img3') {
-			_show_by(3, "mos");
+			_show_by(3);
 
 		} else {
 
@@ -263,7 +263,7 @@ sub_contenet.addEventListener('click', function (e) {
 			removeFromCard(0, e);
 		}
 
-	} else if (e.target && e.target.id == 'btn_add_to_cart1') {
+	}  if (e.target && e.target.id == 'btn_add_to_cart1') {
 		if (e.target.textContent == buttonName) {
 			addToCard(1, e);
 			console.log("add done done");
@@ -272,7 +272,7 @@ sub_contenet.addEventListener('click', function (e) {
 			console.log("remove done");
 		}
 
-	} else if (e.target && e.target.id == 'btn_add_to_cart2') {
+	}  if (e.target && e.target.id == 'btn_add_to_cart2') {
 
 		if (e.target.textContent == buttonName) {
 			console.log("add done done");
@@ -282,7 +282,7 @@ sub_contenet.addEventListener('click', function (e) {
 			console.log("remove done");
 		}
 
-	} else if (e.target && e.target.id == 'btn_add_to_cart3') {
+	}  if (e.target && e.target.id == 'btn_add_to_cart3') {
 
 		if (e.target.textContent == buttonName) {
 			console.log("add done done");
@@ -292,7 +292,7 @@ sub_contenet.addEventListener('click', function (e) {
 			console.log("remove done");
 		}
 
-	} else if (e.target && e.target.id == 'btn_add_to_cart4') {
+	}  if (e.target && e.target.id == 'btn_add_to_cart4') {
 
 		if (e.target.textContent == buttonName) {
 			console.log("add done done");
@@ -303,7 +303,7 @@ sub_contenet.addEventListener('click', function (e) {
 			console.log("remove done");
 		}
 
-	} else if (e.target && e.target.id == 'btn_add_to_cart5') {
+	}  if (e.target && e.target.id == 'btn_add_to_cart5') {
 
 		if (e.target.textContent == buttonName) {
 			console.log("add done done");
@@ -415,35 +415,39 @@ function saveData(_name, _price, _img_src, ind) {
 	counterElementInLocalStorage++;
 }
 var card_window;
-var cardContent=document.getElementById("cardContent");
-function getDataFromLocalStorage() {
+var cardContent = document.getElementById("cardContent");
+console.log(cardContent);
+
+//function getDataFromLocalStorage() {
 	function getData() {
-		
-		if(counterElementInLocalStorage==0){
-			div = document.createElement('div');
-			div.id = 'container_less_data' ;
-			
-			div.className = 'container_less_data_class';
-			cardContent.appendChild(div);
-			var tag = document.createElement("p");
-			var text = document.createTextNode("NOt Element in Card");
-			tag.appendChild(text);
-			div.appendChild(tag);
-			card_window=window.open("card.html");
-			
-			
-		}
-//		if (localStorage.getItem("name") == null || localStorage.getItem == null) {
-//			alert('Not Found data in localStorage');
-//		} else {
-//			username.value = localStorage.getItem("name");
-//			userPassword.value = localStorage.getItem("password");
+		//var myWindow=window.open('card.html/?test='+counterElementInLocalStorage,'');
+
+//		if (true) {
+//			div = document.createElement('div');
+//			div.id = 'container_less_data';
+//
+//			div.className = 'container_less_data_class';
+//			cardContent.appendChild(div);
+//			var tag = document.createElement("p");
+//			var text = document.createTextNode("NOt Element in Card");
+//			tag.appendChild(text);
+//			div.appendChild(tag);
+//			console.log(cardContent);
+//			card_window = window.open("card.html");
+
+
 //		}
+		//		if (localStorage.getItem("name") == null || localStorage.getItem == null) {
+		//			alert('Not Found data in localStorage');
+		//		} else {
+		//			username.value = localStorage.getItem("name");
+		//			userPassword.value = localStorage.getItem("password");
+		//		}
 
 
 
 	}
-}
+//}
 
 function RemoveDataFronLocalStorage(ind) {
 
