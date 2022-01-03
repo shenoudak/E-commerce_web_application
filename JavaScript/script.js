@@ -128,6 +128,7 @@ var content = document.getElementById("content");
 var btn = document.getElementById("btn");
 console.log(btn);
 document.addEventListener('DOMContentLoaded', function () {
+	AddFlagDataToStorage();
 	fetch("../Json/products.json").then(function (res) {
 		console.log(res);
 		return res.json()
@@ -460,4 +461,8 @@ function RemoveDataFronLocalStorage(ind) {
 	localStorage.removeItem(("price" + ind));
 	localStorage.removeItem(("image" + ind));
 	counterElementInLocalStorage--;
+}
+function AddFlagDataToStorage() {
+
+	localStorage.setItem("isLogin", "false");
 }

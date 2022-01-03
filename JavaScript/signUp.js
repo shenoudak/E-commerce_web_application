@@ -40,6 +40,7 @@ function handleSubmit(e){
 	}
 	else{
 		saveData(userInput,pass);
+		localStorage.setItem("isLogin","true");
 	}
 }
 //var username=document.getElementById('userName');

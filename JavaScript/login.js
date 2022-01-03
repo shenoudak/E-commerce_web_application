@@ -37,10 +37,16 @@ function checkUser() {
 			}
 
 		}
+		if((localStorage.getItem("name")==userName)&&(localStorage.getItem("password")==userPassword)){
+			isFound = true;
+		}
 		if (isFound == true) {
-			console.log("valid");
+				console.log("valid");
+			localStorage.setItem("isLogin","true");
+			window.open("card.html")
 		} else {
 			console.log("not valid");
+			localStorage.setItem("isLogin","false");
 		}
 
 		console.log(dataObj);
