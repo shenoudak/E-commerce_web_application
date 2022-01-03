@@ -1,18 +1,17 @@
 var cardbody = document.getElementById("_cardBody");
 console.log(cardbody);
-if(localStorage.getItem("isLogin")=="true"){
+if (localStorage.getItem("isLogin") == "true") {
 	cardbody.onload = show;
-}
-else{
+} else {
 	div = document.createElement('div');
-		div.id = 'container_less_data';
+	div.id = 'container_less_data';
 
-		div.className = 'container_less_data_class';
-		cardbody.appendChild(div);
-		var tag = document.createElement("p");
-		var text = document.createTextNode("you should do Login Or Register before");
-		tag.appendChild(text);
-		div.appendChild(tag);
+	div.className = 'container_less_data_class';
+	cardbody.appendChild(div);
+	var tag = document.createElement("p");
+	var text = document.createTextNode("you should do Login Or Register before");
+	tag.appendChild(text);
+	div.appendChild(tag);
 }
 
 var cont = document.getElementById("cardContent");
@@ -66,4 +65,3 @@ function show() {
 
 
 }
-//console.log(localStorage.getItem("name");)

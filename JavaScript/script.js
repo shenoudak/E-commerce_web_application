@@ -1,123 +1,3 @@
-//////fetch User Data ////////////////////
-"use strict"
-var islogin = false;
-var index = -1;
-var jsonName = [];
-var jsonPassword = [];
-var dataObj = [];
-var isFound = false;
-var btn = document.getElementById("btn");
-console.log(btn);
-
-function checkUser() {
-	fetch("../Json/user.json").then(function (res) {
-		console.log(res);
-		return res.json()
-	}).then(function (data) {
-		dataObj = data.users;
-		var userName = document.getElementById("userName").value;
-		var userPassword = document.getElementById("userPassword").value;
-		for (var i = 0; i < dataObj.length; i++) {
-			console.log(dataObj[i].name);
-			console.log(dataObj[i].password);
-			if ((dataObj[i].name == userName) && (dataObj[i].password == userPassword)) {
-				isFound = true;
-				break;
-			}
-
-		}
-		if (isFound == true) {
-			console.log("valid");
-		} else {
-			console.log("not valid");
-		}
-
-		console.log(dataObj);
-		for (var i = 0; i < dataObj.length; i++) {
-			for (var j = 0; j < data.users; j++) {
-				jsonName[i] = dataObj[j].name;
-			}
-		}
-	});
-}
-//fetch("../Json/user.json").then(function (res) {
-//	console.log(res);
-//    return res.json()
-//}).then(function (data) {
-//	console.log(data);
-//    dataObj = data.users;
-//	var userName=document.getElementById("userName").value;
-//	var userPassword=document.getElementById("userPassword").value;
-//	console.log(userName);
-//	console.log(userPassword);
-//	
-//	for(var i=0;i<dataObj.length;i++){
-//		console.log(dataObj[i].name);
-//		console.log(dataObj[i].password);
-//		if((dataObj[i].name=="shenouda")&&(dataObj[i].password=="shenouda@123")){
-//			isFound=true;
-//			
-//		}
-//		
-//	}
-//	if(isFound==true){
-//		console.log("valid");
-//	}
-//	else{
-//		console.log("not valid");
-//	}
-//	
-//	console.log(dataObj);
-//	for(var i=0;i<dataObj.length;i++){
-//		for(var j=0;j<data.users;j++){
-//			jsonName[i]=dataObj[j].name;
-//		}
-////		jsonName[i]=dataObj[i].name;
-////		jsonPassword=[i]=dataObj[i].password;
-//	}
-//	console.log(jsonName);
-//	console.log(jsonPassword);
-////	console.log(dataObj[0]);
-////    jsonImage=dataObj[0].pic;
-////	console.log(jsonImage);
-//});
-
-function show() {
-	if (index == jsonName.length - 1) {
-		index = -1;
-	}
-	index++;
-	//console.log(typeof jsonName);
-	console.log(jsonName[index].toString());
-}
-//var isFound=false;
-//	var userName=document.getElementById("userName");
-//	var userPassword=document.getElementById("userPassword");
-//console.log(dataObj.name);
-//function checkUser(dataObj){
-//	var userName=document.getElementById("userName").value;
-//	var userPassword=document.getElementById("userPassword").value;
-//	console.log(userName);
-//	console.log(userPassword);
-//	
-//	for(var i=0;i<dataObj.length;i++){
-//		if((dataObj[i].name==userName)&&(dataObj[i].password==userPassword)){
-//			isFound=true;
-//			
-//		}
-//		
-//	}
-//	if(isFound==true){
-//		console.log("valid");
-//	}
-//	else{
-//		console.log("not valid");
-//	}
-//	
-//}
-///////////////////////end fetch User Data ///////////////////////////
-////fetch Product Data ////////////////////
-//var studentObj;
 "use strict"
 var index = -1;
 var div;
@@ -141,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			jsonPic[i] = dataObj[i].picName;
 			div = document.createElement('div');
 			div.id = ('container' + i);
-			//div.onclick="fun"+(i+1)+"()";
 			div.className = 'div_dynamic';
 			content.appendChild(div);
 			var tag = document.createElement("p");
@@ -217,7 +96,7 @@ function _show_by(ind, img_folder) {
 			div.appendChild(price);
 			div.appendChild(btn_add_to_cart);
 			console.log(div);
-			//content.style.visibility = "visible";
+
 
 
 
@@ -329,83 +208,23 @@ var counterElementInLocalStorage = 0;
 function addToCard(ind, e) {
 
 	saveData(jsonName[ind], jsonPrice[ind], jsonPic[ind], ind);
-	//	var ele=document.getElementById(("btn_add_to_cart5"+ind));
 	console.log(e.target);
 
 	e.target.style.backgroundColor = "red";
 	e.target.textContent = buttonName_after;
-	//	buttonName=
-	//	e.target.appendChild(document.createTextNode("Aded"));
-
-
 
 }
 
 function removeFromCard(ind, e) {
-
-	//	saveData(jsonName[ind],jsonPrice[ind],jsonPic[ind],ind);
-	//	var ele=document.getElementById(("btn_add_to_cart5"+ind));
 	console.log(e.target);
 
 	e.target.style.backgroundColor = "#AB5692";
 	e.target.textContent = buttonName;
 	RemoveDataFronLocalStorage(ind);
-	//	buttonName=
-	//	e.target.appendChild(document.createTextNode("Aded"));
 
 
 
 }
-
-
-//div.onclick=function(){
-//	if(div.target.id=="container1"){
-//		alert("container1");
-//	}
-//	if(div.target.id=="container2"){
-//		alert("container2");
-//	}
-//	if(div.target.id=="container3"){
-//		alert("container3");
-//	}
-//}
-//fetch("../Json/products.json").then(function (res) {
-//	console.log(res);
-//    return res.json()
-//}).then(function (data) {
-//	console.log(data);
-//    dataObj = data.Categories;
-//	console.log(dataObj);
-//	for(var i=0;i<data.Categories.length;i++){
-//		jsonName[i]=dataObj[i].type[0].name;
-//		
-//		 var tag = document.createElement("p");
-//         var text = document.createTextNode(jsonName[i]);
-//         tag.appendChild(text);
-//		var element = document.getElementById("new");
-//        element.appendChild(tag);
-//		
-//	}
-//});
-console.log(jsonName);
-//for(var i=0;i<jsonName.length;i++){
-//	console.log(jsonName[i].name);
-//}
-//	console.log(dataObj[0]);
-//    jsonImage=dataObj[0].pic;
-//	console.log(jsonImage);
-//});
-
-//function show() {
-//	if(index==jsonName.length-1){
-//		index=-1;
-//	}
-//	index++;
-//    //console.log(typeof jsonName);
-//    console.log(jsonName[index].toString());
-//}
-/////////////////////////end fetch product Data ///////////////////////////
-//////////////////////////save and get and delete data from local storage/////////////////
 var username = document.getElementById('userName');
 console.log(username);
 var userPassword = document.getElementById('userPassword');
@@ -424,45 +243,22 @@ var card_window;
 var cardContent = document.getElementById("cardContent");
 console.log(cardContent);
 
-//function getDataFromLocalStorage() {
-function getData() {
-	//var myWindow=window.open('card.html/?test='+counterElementInLocalStorage,'');
-
-	//		if (true) {
-	//			div = document.createElement('div');
-	//			div.id = 'container_less_data';
-	//
-	//			div.className = 'container_less_data_class';
-	//			cardContent.appendChild(div);
-	//			var tag = document.createElement("p");
-	//			var text = document.createTextNode("NOt Element in Card");
-	//			tag.appendChild(text);
-	//			div.appendChild(tag);
-	//			console.log(cardContent);
-	//			card_window = window.open("card.html");
-
-
-	//		}
-	//		if (localStorage.getItem("name") == null || localStorage.getItem == null) {
-	//			alert('Not Found data in localStorage');
-	//		} else {
-	//			username.value = localStorage.getItem("name");
-	//			userPassword.value = localStorage.getItem("password");
-	//		}
-
-
-
-}
-//}
-
 function RemoveDataFronLocalStorage(ind) {
 
 	localStorage.removeItem(("name" + ind));
 	localStorage.removeItem(("price" + ind));
 	localStorage.removeItem(("image" + ind));
-	counterElementInLocalStorage--;
 }
-function AddFlagDataToStorage() {
 
-	localStorage.setItem("isLogin", "false");
+function AddFlagDataToStorage() {
+	if(localStorage.getItem("isLogin"==null)||localStorage.getItem("isLogin"==false)){
+		localStorage.setItem("isLogin", "false");
+	}
+	if(localStorage.getItem("isLogin"=="true")){
+		localStorage.setItem("isLogin", "true");
+	}
+
+}
+function logout(){
+	localStorage.removeItem("isLogin");
 }

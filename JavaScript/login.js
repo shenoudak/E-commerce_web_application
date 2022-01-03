@@ -1,14 +1,13 @@
-var bodylogin=document.getElementById('_bodylogin');
-var username=document.getElementById('userName');
+var bodylogin = document.getElementById('_bodylogin');
+var username = document.getElementById('userName');
 console.log(username);
-var userPassword=document.getElementById('userPassword');
-bodylogin.onload=function(){
-	if(localStorage.getItem("name")==null||localStorage.getItem("password")==null){
-//		alert('Not Found data in localStorage');
-	}
-	else{
-		username.value=localStorage.getItem("name");
-		userPassword.value=localStorage.getItem("password");
+var userPassword = document.getElementById('userPassword');
+bodylogin.onload = function () {
+	if (localStorage.getItem("name") == null || localStorage.getItem("password") == null) {
+		//		alert('Not Found data in localStorage');
+	} else {
+		username.value = localStorage.getItem("name");
+		userPassword.value = localStorage.getItem("password");
 	}
 }
 var islogin = false;
@@ -37,16 +36,16 @@ function checkUser() {
 			}
 
 		}
-		if((localStorage.getItem("name")==userName)&&(localStorage.getItem("password")==userPassword)){
+		if ((localStorage.getItem("name") == userName) && (localStorage.getItem("password") == userPassword)) {
 			isFound = true;
 		}
 		if (isFound == true) {
-				console.log("valid");
-			localStorage.setItem("isLogin","true");
+			console.log("valid");
+			localStorage.setItem("isLogin", "true");
 			window.open("card.html")
 		} else {
 			console.log("not valid");
-			localStorage.setItem("isLogin","false");
+			localStorage.setItem("isLogin", "false");
 		}
 
 		console.log(dataObj);
