@@ -42,7 +42,7 @@ function checkUser() {
 		if (isFound == true) {
 			console.log("valid");
 			localStorage.setItem("isLogin", "true");
-			window.open("card.html")
+			window.open("card.html","_self")
 		} else {
 			console.log("not valid");
 			localStorage.setItem("isLogin", "false");

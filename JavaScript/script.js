@@ -231,6 +231,9 @@ var userPassword = document.getElementById('userPassword');
 console.log(userPassword);
 
 function saveData(_name, _price, _img_src, ind) {
+	if(ind>5&&ind<24){
+		ind=ind+1;
+	}
 	localStorage.setItem(("name" + ind), _name);
 	localStorage.setItem(("price" + ind), _price);
 	localStorage.setItem(("image" + ind), _img_src);

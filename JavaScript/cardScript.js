@@ -1,23 +1,39 @@
 var cardbody = document.getElementById("_cardBody");
 console.log(cardbody);
-if (localStorage.getItem("isLogin") == "true") {
-	cardbody.onload = show;
-} else {
-	div = document.createElement('div');
-	div.id = 'container_less_data';
+cardbody.onload = function () {
+	if (localStorage.getItem("isLogin") == "true") {
+		show();
+	} else {
+		div = document.createElement('div');
+		div.id = 'container_less_data';
 
-	div.className = 'container_less_data_class';
-	cardbody.appendChild(div);
-	var tag = document.createElement("p");
-	var text = document.createTextNode("you should do Login Or Register before");
-	tag.appendChild(text);
-	div.appendChild(tag);
+		div.className = 'container_less_data_class';
+		cardbody.appendChild(div);
+		var tag = document.createElement("p");
+		var text = document.createTextNode("you should do Login Or Register before");
+		tag.appendChild(text);
+		div.appendChild(tag);
+	}
+
 }
+//if (localStorage.getItem("isLogin") == "true") {
+//	cardbody.onload = show;
+//} else {
+//	div = document.createElement('div');
+//	div.id = 'container_less_data';
+//
+//	div.className = 'container_less_data_class';
+//	cardbody.appendChild(div);
+//	var tag = document.createElement("p");
+//	var text = document.createTextNode("you should do Login Or Register before");
+//	tag.appendChild(text);
+//	div.appendChild(tag);
+//}
 
 var cont = document.getElementById("cardContent");
 
 function show() {
-	if ((localStorage.length / 3) == 0) {
+	if ((localStorage.length < 3)) {
 		div = document.createElement('div');
 		div.id = 'container_less_data';
 
@@ -30,7 +46,7 @@ function show() {
 		console.log(cont);
 
 	} else {
-		for (var i = 0; i < 6; i++) {
+		for (var i = 0; i < (localStorage.length) / 3; i++) {
 			if (localStorage.getItem(("name" + i)) == null) {
 
 			} else {

@@ -15,6 +15,7 @@ and if there are not data in local storage and the user write user name and pass
 7-in each subcatagory there is are abutton called add to card if user clicked on this button the website save productname and product price and product picture in local storage 
 and if the user clicked on the same button another the website remove that product from local storage
 8-when user clicked basket icon =>the website open page called card(if user login) that page contains all product that user selected it (get data from local storage)
+9-log out (remove user from local storage)
 -------------thank you-------------------------
   
   
